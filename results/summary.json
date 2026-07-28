@@ -1,0 +1,12 @@
+{
+  "instance": "demo",
+  "n_stops": 40,
+  "distance_source": "Haversine x1.3 @ 24.0km/h",
+  "best_method": "GA",
+  "best_distance_km": 469.1,
+  "best_vehicles": 4,
+  "all_time_windows_met": true,
+  "exact_check": "Gurobi not available (skipped)",
+  "ortools": false,
+  "gurobi": false
+}

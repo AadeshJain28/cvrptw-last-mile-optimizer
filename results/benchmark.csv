@@ -1,0 +1,6 @@
+method,cost,distance_km,vehicles,feasible,lateness_min,max_route_min,seconds,gap_%
+GA,8481.0,469.1,4,True,0.0,480.0,7.0,0.0
+SA,8654.0,473.8,4,True,0.0,486.0,5.0,2.0
+Tabu,10408.0,395.9,5,True,0.0,480.0,6.7,22.7
+ClarkeWright,11316.0,427.6,5,True,0.0,498.0,0.0,33.4
+NearestNeighbour,22045.0,710.3,6,True,0.0,573.0,0.0,159.9

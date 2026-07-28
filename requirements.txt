@@ -1,0 +1,10 @@
+# Core (always needed)
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+
+# Optional — used automatically when installed; code falls back otherwise
+ortools>=9.7        # OR-Tools CVRPTW reference solver
+gurobipy>=11.0      # exact CVRPTW check on a sub-instance (needs a Gurobi license)
+requests>=2.31      # OSRM road travel-times (else Haversine fallback)
+folium>=0.15        # interactive route map (else matplotlib map only)

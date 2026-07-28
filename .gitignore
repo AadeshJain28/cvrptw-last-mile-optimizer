@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+gurobi.log
+data/generated/matrix_*.npz
+
+# --- internal planning docs (keep local, not for public repo) ---
+0*_UPGRADE_DESIGN.md
+# --- regenerated data/outputs ---
+data/synthetic/
+data/generated/
+data/processed/
+# --- large datasets (never commit; download separately) ---
+sales_train_validation.csv
+sell_prices.csv
+calendar.csv
+creditcard.csv
+*.npz
