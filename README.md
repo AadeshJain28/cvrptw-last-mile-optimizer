@@ -5,18 +5,6 @@ network, using **real OSRM road travel-times**, with custom **GA / SA / Tabu**
 metaheuristics benchmarked against **OR-Tools** and an exact **Gurobi** model — and
 per-stop **ETAs** on an interactive map.
 
-> Upgraded from a 20-node single-vehicle TSP into a fleet CVRPTW: capacity + hard
-> time windows, real road times, three metaheuristics, a fair benchmark, and ETAs —
-> the "first/last-mile + ETA-at-node" problem Meesho's VaLMo team names in its JD.
-
----
-
-## Why this project exists
-
-The seed was a 20-node exact TSP (DFJ/MTZ/3-index in Pyomo + CBC). It was competent but
-trivial: single vehicle, no capacity, no time windows, straight-line distance, and a
-CBC path hardcoded to another student's machine. It also mislabelled itself "PDTSP"
-though it had no precedence constraints. This rebuild turns it into a real fleet problem.
 
 ## What it does
 
