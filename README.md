@@ -117,37 +117,3 @@ cvrptw-last-mile-opt/
 ├── results/  benchmark.csv · best_eta.csv · route_map.html · summary.json · figures/
 └── requirements.txt
 ```
-
----
-
-## Resume bullets (measured on the real mid/full runs)
-
-- Built a last-mile **CVRPTW** solver for a **150-stop Mumbai** network with **OSRM road
-  travel-times**: custom **GA / SA / Tabu** metaheuristics benchmarked against **OR-Tools**
-  and an exact **Gurobi** model under one scorer — **100% of delivery time windows met**
-  (150/150 on-time) and routing distance cut **~34%** vs a nearest-neighbour baseline.
-- Validated near-optimality: metaheuristics stayed within **+0.5%** of the proven **Gurobi**
-  optimum on sub-instances, and surfaced the **fleet-vs-distance trade-off** (OR-Tools/GA
-  minimise vehicles to 7; SA/Tabu minimise distance to 738 km, beating OR-Tools' 784 km).
-- Delivered per-stop **ETAs** and an interactive **folium** route map; clean, reproducible
-  repo with a feasibility test-suite and full graceful degradation (OR-Tools/Gurobi/OSRM/folium
-  all optional, numpy fallbacks always run).
-
-## Interview questions this prepares you for
-
-- Why heuristics/CP over exact MILP as VRP scale grows? Where does the exact model break?
-- Clarke-Wright savings intuition; 2-opt vs Or-opt vs relocate vs exchange moves.
-- SA cooling schedule & acceptance probability; Tabu tenure & aspiration; GA route-based
-  crossover and why naive order-crossover breaks multi-route solutions.
-- Handling time-window infeasibility: penalty vs repair; hard windows vs soft shift.
-- How OSRM asymmetry (one-ways, turn restrictions) changes the model vs symmetric Haversine.
-- Computing per-node ETA; how forecast/traffic uncertainty would extend this (stochastic VRP).
-
-## Honest limitations & next steps
-
-- Metaheuristics use classic operators; **ALNS** (adaptive large-neighbourhood search) is
-  the natural upgrade for a deeper OR signal.
-- Stops are synthetic-but-geographically-realistic (clustered on 20 real towns); a real
-  order feed would strengthen external validity.
-- Deterministic travel-times; **ML-predicted / stochastic ETAs feeding the router** is the
-  Hybrid (Resume C) extension that maps to Meesho's "predict ETA per node".
